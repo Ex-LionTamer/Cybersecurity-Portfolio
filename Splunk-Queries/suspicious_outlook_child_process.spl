@@ -1,0 +1,4 @@
+index=windows EventCode=1
+ParentImage="*OUTLOOK.EXE"
+(Image="*cmd.exe" OR Image="*powershell.exe" OR Image="*wscript.exe")
+| table _time host user ParentImage Image CommandLine
