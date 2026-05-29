@@ -39,3 +39,15 @@ Aspiring SOC Analyst and Blue Team enthusiast focused on:
 
 ## Goals
 Building practical Blue Team and SOC portfolio projects.
+
+## Featured Projects
+
+### 1. Detecting Suspicious PowerShell Activity
+Detection engineering project focused on identifying suspicious PowerShell EncodedCommand usage.
+
+Skills:
+- Sigma Rules
+- IOC Analysis
+- Splunk Query
+- MITRE ATT&CK Mapping
+- Detection Logic
