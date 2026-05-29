@@ -1,0 +1,28 @@
+title: Outlook Spawning Suspicious Child Process
+
+id: 1003
+
+status: experimental
+
+description: Detects Outlook spawning suspicious child processes
+
+author: Reynaldi
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  parent_process:
+    ParentImage|endswith:
+      - '\OUTLOOK.EXE'
+
+  suspicious_child:
+    Image|endswith:
+      - '\cmd.exe'
+      - '\powershell.exe'
+      - '\wscript.exe'
+
+condition: parent_process and suspicious_child
+
+level: high
