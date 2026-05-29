@@ -1,1 +1,30 @@
+title: Suspicious PowerShell EncodedCommand
 
+id: 1001
+
+status: experimental
+
+description: Detects suspicious PowerShell execution using EncodedCommand
+
+author: Reynaldi
+
+date: 2025-10-14
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  selection:
+    Image|endswith:
+      - '\powershell.exe'
+
+    CommandLine|contains:
+      - 'EncodedCommand'
+
+condition: selection
+
+falsepositives:
+  - Administrative scripts
+
+level: high
